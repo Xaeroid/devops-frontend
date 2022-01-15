@@ -28,7 +28,8 @@ const Login = () =>{
             .then(result => {
                 if (JSON.parse(result).message === true) {
                     localStorage.setItem('token', result.token);
-                    window.location.href = "Ordersummary";
+                    console.log(result);
+                    window.location.href = "summary";
                 }
                 else {
                     alert("invalid username or password");
